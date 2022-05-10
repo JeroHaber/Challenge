@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #F3F5FC;
+}
+
+.logo{
+    position: relative;
+    width: 120px;
+    height: 48px;
+    left: 0px;
+    top: 20px;  
+}
+
+.titulo{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 100px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    
+    color: #0A3871;
+}
+
+.input-encriptar{
+    position: relative;
+    top: 100px;
+    left: 230px;
+    width: 50%;
+    padding: 100px 25px;
+    margin: 0 0 20px;
+    display: inline;
+    font-size: 20px;
+}
+
+.texto-encriptado{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    width: 25%;
+    padding: 100px 25px;
+    margin: 0 0 20px;
+    display: inline;
+    font-size: 20px;
+}
+
+#munheco{
+    position: relative;
+    width: 336px;
+    height: 304px;
+    left: 1100px;
+    top: 300px;
+    
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    left: 1100px;
+    top: 20px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.mensaje-noencontrado{
+    position: static;
+    width: 336px;
+    height: 58px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-style: initial;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+.ingresa-texto{
+    position: static;
+    width: 336px;
+    height: 48px;
+    left: 0px;
+    top: 74px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    text-align: center;
+
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+.vector{
+    position: relative;
+    top: 295px;
+    left: 250px;
+}
+
+.advertencia{
+    display:inline;
+    position: relative;
+    color: #495057;
+    width: 205px;
+    height: 18px;
+    font-weight: 400, regular;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 250px;
+    left: 270px;
+}
+
+.boton1{
+    position: relative;
+    left: 0px;
+    top: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 20%;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: rgb(148, 69, 4);
+    border-radius:24px;
+    border: none;
+    display: inline;
+}
+
+.boton2{
+    position: relative;
+    left: 50px;
+    top: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 20%;
+    padding: 15px 0;
+    font-size: 20px;
+    color: rgb(148, 69, 4);
+    background: #FFFFFF;
+    border-radius:24px;
+    border-color: rgb(148, 69, 4);
+    display: inline;
+}
+
+.botonCopiar{
+    position: relative;
+    top: 240px;
+    left: 1100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 20%;
+    padding: 15px 0;
+    font-size: 20px;
+    color: rgb(148, 69, 4);;
+    background: #FFFFFF;
+    border-radius:24px;
+    border-color: rgb(148, 69, 4);
+}
+
+.boton1:hover{
+    border-color:red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.boton2:hover{
+    border-color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.red-social{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    left: 100px;
+    top: 400px;
+}
+
+.red-social ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.red-social ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.red-social ul:hover a{
+    filter: blur(2px);
+}
+
+.red-social ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    filter: none;    
+}
+
+.instagram:hover{
+    background-color: #e4405f;
+}
+
+.facebook:hover{
+    background-color: #3b5998
+}
+
+.linkedin:hover{
+    background-color: #0077B5
+}
