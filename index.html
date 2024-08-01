@@ -1,109 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/js/script.js" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/js/script.js" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header class="logo">
-      <a href="https://www.aluracursos.com/"
-        ><img src="/assets/img/Logo1.png" />
-      </a>
-    </header>
-    <main>
-      <section>
-        <div class="conteiner-input">
-          <textarea
-            type="text"
-            id="textoingreso"
-            class="input-encriptar"
-            placeholder="Ingrese texto aquí"
-            oninput="validarTextarea(this)"
-          ></textarea>
-          <textarea
-            type="text"
-            readonly
-            id="mostrar"
-            class="texto-encriptado"
-          ></textarea>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <header class="logo">
+            <a href="https://www.aluracursos.com/"
+                ><img src="/assets/img/Logo1.png" />
+            </a>
+        </header>
+        <main>
+            <section>
+                <div class="conteiner-input">
+                    <textarea
+                        type="text"
+                        id="textoingreso"
+                        class="input-encriptar"
+                        placeholder="Ingrese texto aquí"
+                        oninput="validarTextarea(this)"
+                    ></textarea>
+                    <textarea
+                        type="text"
+                        readonly
+                        id="mostrar"
+                        class="texto-encriptado"
+                    ></textarea>
+                </div>
+                <ul id="munheco">
+                    <il>
+                        <img class="muneco" src="/assets/img/Muneco1.png" />
+                        <p class="mensaje-noencontrado">
+                            Ningún mensaje fue encontrado
+                        </p>
+                        <p class="ingresa-texto">
+                            Ingresa el texto que desees encriptar o
+                            desencriptar.
+                        </p>
+                    </il>
+                </ul>
+                <div class="conteiner">
+                    <div class="vector">
+                        <img src="/assets/img/Vector.png" />
+                        <p class="advertencia">
+                            Solo letras minisculas y sin acentos
+                        </p>
+                    </div>
+                    <div class="botones">
+                        <input
+                            type="submit"
+                            value="Encriptar"
+                            class="boton1"
+                            onclick="btencriptar()"
+                        />
+                        <input
+                            type="submit"
+                            value="Desencriptar"
+                            class="boton2"
+                            onclick="btdesencriptar()"
+                        />
+                        <button
+                            type="button"
+                            id="bt-copiar"
+                            class="botonCopiar"
+                            onclick="btcopiar()"
+                        >
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer class="pie">
+        <div class="red-social">
+            <ul>
+                <li>
+                    <a
+                        href="https://www.facebook.com/jero.haberkorn/"
+                        class="facebook"
+                        ><i class="fab fa-facebook-f"></i
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.instagram.com/jerohaberkorn/"
+                        class="instagram"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/jer%C3%B3nimo-haberkorn-244b09239/"
+                        class="linkedin"
+                        ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                </li>
+            </ul>
         </div>
-        <ul id="munheco">
-          <il>
-            <img class="muneco" src="/assets/img/Muneco1.png" />
-            <p class="mensaje-noencontrado">Ningún mensaje fue encontrado</p>
-            <p class="ingresa-texto">
-              Ingresa el texto que desees encriptar o desencriptar.
-            </p>
-          </il>
-        </ul>
-        <div class="conteiner">
-          <div class="vector">
-            <img src="/assets/img/Vector.png" />
-            <p class="advertencia">Solo letras minisculas y sin acentos</p>
-          </div>
-          <div class="botones">
-            <input
-              type="submit"
-              value="Encriptar"
-              class="boton1"
-              onclick="btencriptar()"
-            />
-            <input
-              type="submit"
-              value="Desencriptar"
-              class="boton2"
-              onclick="btdesencriptar()"
-            />
-            <button
-              type="button"
-              id="bt-copiar"
-              class="botonCopiar"
-              onclick="btcopiar()"
-            >
-              Copiar
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-  <footer class="pie">
-    <div class="red-social">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/jero.haberkorn/" class="facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/jerohaberkorn/" class="instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/jer%C3%B3nimo-haberkorn-244b09239/"
-            class="linkedin"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script src="/assets/js/script.js"></script>
+    </footer>
+    <script src="/assets/js/script.js"></script>
 </html>
